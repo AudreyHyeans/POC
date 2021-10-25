@@ -1,0 +1,8 @@
+git pull origin main     # permet de recuperer ce que tu as fait
+git pull     # peut fonctionner egalement
+
+git status    # montre ce qui as été modifié
+git add -A # Ajoute TOUTES les modifs
+git commit -m "optimize la fonction frag9 "  # Pour valider les modifs
+git push origin main # Pour envoyer en ligne tes modifs
+git push  # Tout court peut marcher aussi
