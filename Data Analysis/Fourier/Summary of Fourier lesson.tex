@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{listing}
+\title{Summary for the Fourier lesson }
+\begin{document}
+\section{Formulas}
+\subsection{Definition of a signal}
+A signal is a record of a process that varies either in time or in space. It's a sum of various periodically quantities. \newline
+The aim of this lesson is to decompose a signal into a sum of cosinus and sinus.
+
+\subsubsection{Fourier series : principle}
+Let's consider a periodic fonction $h(t)$ such that $h(t) = h(t+T)$ with T the temporal period. \newline
+
+We want to decompose h into a sum of cosinus and sinus : \newline
+
+$h(t)= \sum_{n=0}^{\infty} An*sin(2*\pi*f_n*t+\phi_n)$\newline
+After some calculus that you can check in the demonstration 1. \newline
+$h(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n*\sin(2*\pi*f_n*t) + b_n*\cos(2*\pi*f_n*t)$ \newline
+with $a_n = \frac{2}{T} * \int_{0}^{T} h(t)*\sin(2*\pi*f_n*t)dt$ , $b_n = \frac{2}{T} * \int_{0}^{T} h(t)*\cos(2*\pi*f_n*t)dt$ and $a_0 =\frac{2}{T} * \int_{0}^{T} h(t)dt$
+
+
+\section{Formulas and demonstrations}
+\end{document}

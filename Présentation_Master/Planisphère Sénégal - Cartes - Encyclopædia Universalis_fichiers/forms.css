@@ -1,0 +1,8 @@
+.checkbox.disabled{color: #ccc}
+.checkbox.disabled span{text-decoration: line-through}
+.checkbox.disabled span::before{text-decoration: none}
+.checkbox-inline label, .radio-inline label{font-weight: 400}
+label input[type=checkbox]+span::before{content:"\f096";font-family:FontAwesome;margin-right:5px; transition:all ease .4s}
+label input[type=checkbox]:checked+span::before{content:"\f046"}
+label input[type=radio]+span::before{content:"\f10c";font-family:FontAwesome;margin-right:5px;transition:all ease .4s}
+label input[type=radio]:checked+span::before{content:"\f192"}

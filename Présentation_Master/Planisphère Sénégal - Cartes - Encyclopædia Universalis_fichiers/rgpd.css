@@ -1,0 +1,14 @@
+#qc-cmp2-ui{padding: 10px !important}
+.qc-cmp2-summary-buttons{justify-content: space-around !important}
+.qc-cmp2-summary-buttons button[mode="secondary"], .qc-cmp2-footer  button[mode="secondary"]{border: none; box-shadow: none}
+
+.eCBsvP.eCBsvP{height: auto !important;}
+
+.qc-cmp-cleanslate{
+	background-color: rgba(33, 41, 52, 0.95) !important;
+}
+@media (min-width: 768px){
+	/* .qc-cmp2-summary-section img{display: none !important} */
+	.qc-cmp2-publisher-logo-container{text-align: center}
+	.qc-cmp2-publisher-logo-container figure img{display: block !important}
+}

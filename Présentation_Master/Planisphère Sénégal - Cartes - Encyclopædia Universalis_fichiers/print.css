@@ -1,0 +1,208 @@
+/* --------------------------------------------------------------
+
+ Hartija Css Print  Framework
+   * Version:   1.0
+
+-------------------------------------------------------------- */
+@media print{
+	body {
+	width:100% !important;
+	margin:0 !important;
+	text-align: left;
+	padding:0 !important;
+	font-family: Garamond,"Times New Roman", serif;
+	color: #000;
+	background: none;
+	  line-height: 1.5;
+	  font-size: 13pt !important;
+	}
+
+	/* Headings */
+	h1,h2,h3,h4,h5,h6 {font-family: Garamond,"Times New Roman", serif;   font-weight: bold;
+	  page-break-after: avoid;
+	  page-break-inside:avoid;}
+	h1{font-size:21pt;}
+	h2{font-size:19pt;}
+	h3{font-size:16pt;}
+	h4{font-size:15pt;}
+	h5{font-size:14pt;}
+	h6{font-size:13pt;}
+
+
+	/* p, h2, h3, h4, h5, h6 { orphans: 3; widows: 3} */
+
+	p, #corps-fr p, article p{text-align: left !important}
+	code { font: 12pt Courier, monospace; }
+	blockquote { margin: 1.2em; padding: 1em;  font-size: 12pt; }
+	hr { background-color: #ccc; }
+
+	/* Images */
+	/* img { float: left; margin: 1em 1.5em 1.5em 0; max-width: 100% !important; } */
+	a img { border: none; }
+
+	.formule img{float: none}
+	/* Links */
+	abbr[title]:after { content: " (" attr(title) ")"; }
+
+	/* Don't show linked images  */
+	a[href^="http://"] {color:#000; }
+	/* a[href$=".jpg"]:after, a[href$=".jpeg"]:after, a[href$=".gif"]:after, a[href$=".png"]:after { content: " (" attr(href) ") "; display:none; } */
+
+	/* Don't show links that are fragment identifiers, or use the `javascript:` pseudo protocol .. taken from html5boilerplate */
+	a[href^="#"]:after, a[href^="javascript:"]:after {content: "";}
+
+	/* Table */
+	table { margin: 1px; text-align:left; page-break-inside: avoid; }
+	th { border-bottom: 1px solid #333;  font-weight: bold; }
+	td { border-bottom: 1px solid #333; }
+	th,td { padding: 4px 10px 4px 0; }
+	tfoot { font-style: italic; }
+	caption { background: #fff; margin-bottom:2em; text-align:left; }
+	thead {display: table-header-group;}
+	img,tr, li, .line {page-break-inside: avoid;}
+
+	#top, #MathJax_Message, .affix-top, .modal, .modal-backdrop, #cookie-bar {display: none !important}
+	header{margin-top: -100px; border: none}
+	header.header{border: none; clear: both}
+	/* header.header img{height: 100%} */
+	article{border: none; clear: both}
+	h1{text-align: left; margin-left: -20px; padding-left: 0}
+
+
+
+	h1+p, h2+p, h3+p, h4+p, h5+p {
+	  page-break-before: avoid;
+	}
+
+	@page
+	{
+	    size: auto;   /* auto is the initial value */
+
+	    /* this affects the margin in the printer settings */
+	    /* margin: 20mm;*/
+	}
+
+	#corps-fr{width: 90%; margin: 0 auto}
+	#lang{display: none}
+	/* , .drawer, .drawer-inner, .drawer .list-unstyled, #favoris_historique, #favoris_bootbox_dialog, */
+		.screen-only, .tts,  progress, .star_favori, .btn, #cta-main-top, #cta-main-bottom, span.blank{display:none !important; visibility: hidden !important}
+		div[id*=ad_], #cta-article{display: none !important}
+		header.header{padding: 0}
+		.logo-print{display: block; width: 100%; text-align: left; height: 75px}
+		a[href]:after{content:"" !important}
+		/*a.rv[href]:after{content:" [URL : " attr(data-src)attr(href) "]" !important; font-size: .9em}*/
+		.drawer{width: 800px !important; padding-top: 0; position:relative !important; display:block !important; float:none; clear:both; overflow:visible; height:auto; border:none; box-shadow:none; margin-left: 75px !important}
+		.drawer a{text-decoration:none !important; font-weight:normal !important}
+		.drawer .type{font-size:0.5em !important; color:#666 !important; margin-left:15px; text-transform:uppercase; font-family:Arial; margin-top:10px; border: none}
+		.drawer small{font-size: 10px}
+		.drawer li:not(:last-child){border-bottom:1px solid #eee; margin-bottom:20px}
+		#favoris .dossiers.specific :not(.only-print){display:none}
+		#favoris .dossiers.specific .only-print *:not(.options){display:inherit !important}
+		#favoris .dossiers.specific .only-print a.closed::before, #favoris .dossiers.specific .only-print a.opened::before{float:left; content:"\f07c"; font-family:FontAwesome; margin-right:5px}
+		#favoris .dossiers.specific .only-print, #favoris .dossiers.specific .only-print li{border-bottom:none !important}
+		#favoris .dossiers.all a.closed{font-weight:bold}
+		#favoris .dossiers.all a.closed::before{content:"\f07c"; font-family:FontAwesome; margin-right:5px}
+		#favoris .dossiers.all ul{display:block !important}
+		#favoris .dossiers.all li:not(:last-child){border:none}
+		.med-colonne{float:none; clear:both; display:block; page-break-inside:avoid}
+		.med-colonne:not(.first){page-break-before:always}
+		.med-colonne img.visible-print{display:block; width:100%; margin:0 auto 10px auto; clear:both; float:none}
+		.med-colonne .legende{display:block; float:none; clear:both}
+		.med-colonne .credit{color:#999 !important; font-size: .8em; font-style:italic}
+		footer{display: inline-block !important; position: relative !important; width: 100%; margin: 0 !important}
+
+		.media{page-break-inside:avoid ; orphans: 3; widows: 3; width: 100%; border: none;}
+		.media-legend{height: auto !important; font-size: 12pt}
+
+		.media-print{
+			position: relative !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			margin: 0 auto !important;
+			padding: 0 !important;
+			text-align: center !important;
+		}
+		.media-print .media-content{
+			width: 100%;
+			position: relative;
+			margin: 0 auto;
+			width: 100%;
+		}
+		.media-print .media-element{
+			width: 100%;
+			margin: 0 auto;
+			padding: 0;
+			height: auto !important;
+
+		}
+		.media-print .media-element .lhp_miv_content_holder{
+			position: relative !important;
+			left: auto !important;
+			top: auto !important;
+			width: 100% !important;
+			margin: 0 auto;
+			text-align: center !important;
+			overflow: visible
+
+		}
+		.media-print .media-element .lhp_miv_content_holder img{
+			margin: 0 auto !important;
+			max-width: 100% !important;
+			height: auto !important;
+			float: none !important;
+			border: 1px solid #ccc;
+			padding: 4px;
+			border-radius: 6px;
+		}
+		.media-left{display: block; float: left}
+		.media-left img{margin-right: 10px}
+		.media-left .img-thumbnail{border: none}
+		.media .media-heading{margin-top: 0; font-size: 12pt}
+		#print-atlas-carte{width: 90%; margin: 10px auto}
+		#print-atlas-carte img{		border: 1px solid #ccc; padding: 4px; border-radius: 6px}
+		#print-atlas-carte .list-unstyled{display: inherit; visibility: visible !important}
+		#print-atlas-carte .col-sm-6, #print-atlas-carte .col-sm-4{float: left;}
+		#print-atlas-carte .col-sm-6{width: 50% !important}
+		#print-atlas-carte .col-sm-4{width: 33% !important}
+
+		.lhp_miv_map{display: none}
+		.columns{column-count: 1; -webkit-column-count: 1; -moz-column-count: 1; border: 1px solid transparent}
+
+		a{text-decoration: none !important; color: #000; font-weight: normal}
+		/* .chapter a.underline:after{content:" (\261e\000a0"attr(data-src)attr(href)") ";font-size:10pt;font-weight:normal} */
+		.intro-auteur{background: none; width: 100%; margin: 0 auto 10px auto auto; border: none}
+
+		#also a{display: block}
+		#also a:after{content:" : "attr(data-src)attr(href); font-weight:normal}
+
+		.auteurs strong em{font-style: normal}
+
+	.label{border: none; background: transparent; color: #000}
+
+	#psommaire i{display: none}
+	#psommaire ol{margin-left: 10px}
+	#psommaire .nav>li>a{display: inherit; color: red !important}
+
+	.lirelasuite:after{display: block !important; content: " : "attr(href)}
+	.lirelasuite, #navigation, #cta-senior, #cta-junior{display: none}
+	#sujet .more_sujet{display: block}
+	#citation{display: block !important; visibility: visible !important; border: none}
+
+	footer{border-top: 1px solid #ccc; padding-top: 10px; margin-top: 20px !important}
+	footer p, footer a{font-size: 12pt !important; color: #666 !important; text-align: center !important}
+
+	.link-print{color: #999 !important; font-style: italic; font-size: 10pt !important; font-family: Arial}
+
+	#correlatsInner{margin-left: -50px}
+
+	.media-landing{
+		position: absolute;
+		top: 200px;
+		left: -10px;
+	}
+
+	.chapter,.media,.line, #also{content-visibility: visible}
+	#ad_topslot, .ads, #ad_mpuslot{display: none}
+	.logo-junior{width: 150px !important; height: auto}
+}
